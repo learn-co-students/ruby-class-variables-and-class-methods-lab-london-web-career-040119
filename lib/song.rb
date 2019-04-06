@@ -31,14 +31,14 @@ class Song # Define our Song class
         artist_count[artist] = 1 # we will just set the new artist name key equal to 1
       end # end of conditional statements
     end # end of out iteration
-    artist_count # finally we want the method to print the new artist count hash that we have created
+    artist_count # finally we want the method to print the new artist count hash that we have created - this way of displaying information is called a histogram 
   end # end of artist count class method
 
   def self.genres   # here we use a class method to make sure our class variable genres has a unique array - since we way add two different song with same genre we only need to print that genre name one - we dont need it multiple times. - we use self to call upon the class itself
     @@genres.uniq   # we will use the .uniq method will which print out the uniq version of the genre array
   end # end of genres method
 
-  def self.genre_count # this class method will repeat the exact process as artist count above -  returning a hash that tells us for each genre key have many songs it has in that genre 
+  def self.genre_count # this class method will repeat the exact process as artist count above -  returning a hash that tells us for each genre key have many songs it has in that genre
     genre_count = {}
     @@genres.each do |genre|
       if genre_count[genre]
